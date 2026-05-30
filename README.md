@@ -156,17 +156,7 @@ The following documentation is included inside the repository.
 * PHPUnit_Result.png
 * DD_Debugging.png
 * Live_URL_Screenshot.png
-
-### screenshots/
-
-* Login Page
-* User Dashboard
-* Browse Items
-* Item Details
-* Claim Request
-* Admin Dashboard
-* Admin Items Management
-
+  
 ---
 
 ## System Architecture
@@ -199,13 +189,19 @@ The system follows the Model-View-Controller (MVC) architecture provided by Code
 
 ```text
 app/
+docs/
 public/
 tests/
 writable/
-docs/
-screenshots/
+.gitignore
+LISENCE
 README.md
+builds
 composer.json
+composer.lock
+phpunit.dist.xml
+preload.php
+spark
 ```
 
 ## Developers
@@ -216,6 +212,46 @@ National Teachers College
 
 Academic Year 2025–2026
 
+## Group Members
+
+# EJ Arcilla
+
+* Project planning and coordination
+* User authentication module
+* Item management module
+* Claim request module
+* Admin dashboard development
+* Deployment to InfinityFree Hosting
+* PHPUnit testing and debugging
+* GitHub repository management
+
+# Berdejo, Justine Marlowie
+
+* Database design and integration
+* Backend logic implementation
+* Model and controller development
+* Feature validation and testing support
+
+# Bitara, Peter John
+
+* Frontend implementation
+* Bootstrap integration
+* User interface improvements
+* Layout and styling support
+
+# Guico, Karlo Emanuel
+
+* Documentation preparation
+* Security Report preparation
+* Deployment Log preparation
+* README documentation
+
+# King, Allen Marlon
+
+* System testing
+* Debugging support
+* Validation of user and admin features
+* Live deployment verification
 ---
 
 ## Conclusion
