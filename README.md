@@ -1,69 +1,223 @@
-# CodeIgniter 4 Application Starter
+# FINDIT - Lost and Found Management System
 
-## What is CodeIgniter?
+## Project Overview
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+FINDIT is a web-based Lost and Found Management System developed using CodeIgniter 4. The system provides a centralized platform where users can report lost or found items, browse available reports, submit claims, and provide item update reports. Administrators can manage reported items, review user submissions, and monitor recovery activities through an administrative dashboard.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+The objective of the system is to improve the efficiency of item recovery by replacing manual lost-and-found processes with a secure and organized digital solution.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+---
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## Live Deployment
 
-## Installation & updates
+### Live URL
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+https://finditlostandfound.infinityfreeapp.com
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### Hosting Provider
 
-## Setup
+InfinityFree Hosting
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+---
 
-## Important Change with index.php
+## Features
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+### User Module
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+* User Registration
+* User Login and Logout
+* Report Lost Items
+* Report Found Items
+* Upload Item Images
+* Browse Reported Items
+* Search and Filter Items
+* View Item Details
+* Submit Claim Requests
+* Submit Item Update Reports
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### Admin Module
 
-## Repository Management
+* Dashboard Monitoring
+* View Reported Items
+* Manage Item Status
+* Mark Items as Found
+* Mark Items as Recovered
+* Review Claim Requests
+* Approve or Reject Claims
+* Review Item Update Reports
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+---
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## Technologies Used
 
-## Server Requirements
+### Backend
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+* PHP
+* CodeIgniter 4
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+### Frontend
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+* HTML5
+* CSS3
+* Bootstrap 5
+* JavaScript
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### Database
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+* MySQL
+
+### Development Tools
+
+* XAMPP
+* Visual Studio Code
+* Git
+* GitHub
+
+### Deployment
+
+* InfinityFree Hosting
+
+---
+
+## Security Features
+
+The system implements several security mechanisms to protect user information and application functionality.
+
+### Authentication and Authorization
+
+* Session-based authentication
+* Role-based access control
+* Admin route protection
+
+### Cross-Site Request Forgery (CSRF)
+
+* CodeIgniter CSRF protection enabled
+* CSRF tokens included in form submissions
+
+### Cross-Site Scripting (XSS) Prevention
+
+* Escaped output using CodeIgniter helper functions
+* Sanitized user-generated content
+
+### Input Validation
+
+* Required field validation
+* Image upload validation
+* Server-side validation rules
+
+### Database Security
+
+* CodeIgniter Query Builder
+* Protection against SQL Injection attacks
+
+---
+
+## Testing and Debugging
+
+### PHPUnit Testing
+
+The system was tested using PHPUnit.
+
+Results:
+
+* 3 Test Cases Executed
+* 5 Assertions Passed
+* No Failed Tests
+
+### Debugging
+
+CodeIgniter's `dd()` function was used during development to inspect request data and validate application behavior.
+
+---
+
+## Deployment Process
+
+1. Created InfinityFree hosting account.
+2. Created production MySQL database.
+3. Exported local database using phpMyAdmin.
+4. Imported database into production server.
+5. Uploaded CodeIgniter project files.
+6. Updated application configuration.
+7. Configured production database credentials.
+8. Verified routing and authentication.
+9. Tested all major system functions.
+10. Published the application through the live URL.
+
+---
+
+## Documentation
+
+The following documentation is included inside the repository.
+
+### docs/
+
+* Security_Report.pdf
+* Deployment_Log.pdf
+* PHPUnit_Result.png
+* DD_Debugging.png
+* Live_URL_Screenshot.png
+
+### screenshots/
+
+* Login Page
+* User Dashboard
+* Browse Items
+* Item Details
+* Claim Request
+* Admin Dashboard
+* Admin Items Management
+
+---
+
+## System Architecture
+
+The system follows the Model-View-Controller (MVC) architecture provided by CodeIgniter 4.
+
+### Models
+
+* UserModel
+* ItemModel
+* ClaimModel
+* ItemUpdateModel
+
+### Controllers
+
+* Auth Controller
+* Item Controller
+* Admin Controller
+
+### Views
+
+* Authentication Pages
+* User Dashboard
+* Item Management Pages
+* Admin Dashboard
+
+---
+
+## Repository Structure
+
+```text
+app/
+public/
+tests/
+writable/
+docs/
+screenshots/
+README.md
+composer.json
+```
+
+## Developers
+
+Bachelor of Science in Information Technology
+
+National Teachers College
+
+Academic Year 2025–2026
+
+---
+
+## Conclusion
+
+FINDIT provides a secure, organized, and accessible platform for managing lost-and-found activities. Through user reporting, claim management, administrative monitoring, and online deployment, the system improves the efficiency of recovering lost items while maintaining security and usability.
